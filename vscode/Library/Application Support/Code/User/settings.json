@@ -1,0 +1,58 @@
+{
+    "editor.fontFamily": "Inconsolata",
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "editor.folding": false,
+    "editor.dragAndDrop": false,
+    "explorer.openEditors.visible": 0,
+    "editor.rulers": [120],
+    "editor.selectionHighlight": false,
+    "files.trimTrailingWhitespace": true,
+    "python.linting.flake8Enabled": true,
+    "python.unitTest.pyTestEnabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.mypyEnabled": false,
+    "python.venvPath": "~/.local/share/virtualenvs/",
+
+    "editor.renderWhitespace": "boundary",
+    "editor.renderControlCharacters": true,
+    "explorer.autoReveal": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "auto-close-tag.SublimeText3Mode": true,
+    "[python]": {
+
+    },
+    "rust.rustup": {
+        "toolchain": "stable-x86_64-apple-darwin",
+        "nightlyToolchain": "nightly-x86_64-apple-darwin"
+    },
+    "rust.mode": "legacy",
+    "[rust]": {},
+    "extensions.ignoreRecommendations": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true
+    },
+    "workbench.statusBar.feedback.visible": false,
+    "python.venvFolders": [
+        "envs",
+        ".pyenv",
+        ".direnv",
+        ".local/share/virtualenvs/"
+    ],
+    "materialTheme.fixIconsRunning": false,
+    "scm.diffDecorationsGutterWidth": 2,
+    "workbench.editor.tabCloseButton": "off",
+    "window.zoomLevel": 0,
+    "breadcrumbs.enabled": true,
+    "python.jediEnabled": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Dark+ (contrast)",
+    "git.enableSmartCommit": true,
+    "docker.showExplorer": false,
+}
