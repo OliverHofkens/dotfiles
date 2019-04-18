@@ -9,7 +9,7 @@
         "command": "-workbench.action.splitEditor"
     },
     {
-        "key": "cmd+space",
+        "key": "cmd+enter",
         "command": "explorer.openToSide",
         "when": "explorerViewletFocus && explorerViewletVisible"
     },

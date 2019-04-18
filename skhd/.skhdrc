@@ -1,7 +1,1 @@
-cmd + alt + ctrl - r : khd -e "reload"
-
 ctrl - r : chunkc tiling::desktop --rotate 90
-
-ctrl + cmd - &  : chunkc tiling::window --send-to-monitor 1; chunkc tiling::monitor -f 1
-ctrl + cmd - é  : chunkc tiling::window --send-to-monitor 2; chunkc tiling::monitor -f 2
-ctrl + cmd - " : chunkc tiling::window --send-to-monitor 3; chunkc tiling::monitor -f 3
