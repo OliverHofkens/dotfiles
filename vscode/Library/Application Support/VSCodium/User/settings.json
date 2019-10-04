@@ -10,7 +10,6 @@
     ],
     "editor.selectionHighlight": false,
     "files.trimTrailingWhitespace": true,
-    "python.unitTest.pyTestEnabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.mypyEnabled": true,
     "python.venvPath": "~/.local/share/virtualenvs/",
@@ -38,7 +37,6 @@
         "**/CVS": true,
         ".mypy_cache": true,
     },
-    "workbench.statusBar.feedback.visible": false,
     "python.venvFolders": [
         "envs",
         ".pyenv",
@@ -52,7 +50,6 @@
     "breadcrumbs.enabled": true,
     "python.jediEnabled": true,
     "git.enableSmartCommit": true,
-    "docker.showExplorer": false,
     "workbench.colorTheme": "Dark+ (contrast)",
     "keyboard.touchbar.enabled": false,
     "git.autofetch": true,
@@ -64,5 +61,17 @@
     "files.associations": {
         "*.toml": "toml"
     },
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.activityBar.visible": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#000000",
+        "titleBar.activeBackground": "#000000",
+        "sideBar.background": "#000000",
+        "sideBar.border": "#000000",
+        "activityBar.background": "#000000",
+        "activityBar.foreground": "#ffffff",
+        "activityBar.inactiveForeground": "#ffffff",
+    },
+    "search.quickOpen.includeSymbols": true,
+    "files.maxMemoryForLargeFilesMB": 8192
 }

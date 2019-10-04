@@ -1,1 +1,1 @@
-ctrl - r : chunkc tiling::desktop --rotate 90
+ctrl - r : yabai -m space --rotate 90

@@ -20,3 +20,7 @@ status --is-interactive; and source (pyenv init -|psub)
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
 set PATH $HOME/.cargo/bin $PATH
+direnv hook fish | source
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/oliver/repos/nove-0037-barry-web/node_modules/tabtab/.completions/slss.fish ]; and . /Users/oliver/repos/nove-0037-barry-web/node_modules/tabtab/.completions/slss.fish
