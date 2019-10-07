@@ -1,2 +1,11 @@
 directory: ~/Sync/Music
 library: ~/Sync/Music/beets-library.db
+plugins: fetchart embedart
+
+fetchart:
+  auto: true
+  cautious: yes
+
+embedart:
+  auto: yes
+  ifempty: yes
