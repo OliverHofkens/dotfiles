@@ -73,5 +73,4 @@
         "activityBar.inactiveForeground": "#ffffff",
     },
     "search.quickOpen.includeSymbols": true,
-    "files.maxMemoryForLargeFilesMB": 8192
 }
