@@ -49,8 +49,9 @@ yabai -m config right_padding                20
 yabai -m config window_gap                   10
 
 # Overrides
-yabai -m space 4 --padding abs:0:0:0:0
 yabai -m space 2 --padding abs:0:0:0:0
+yabai -m space 4 --padding abs:0:0:0:0
+yabai -m space 9 --padding abs:0:0:0:0
 
 # Specific rules
 yabai -m rule --add app=gramps manage=off
