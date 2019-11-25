@@ -1,1 +1,2 @@
 ctrl - r : yabai -m space --rotate 90
+ctrl - f : yabai -m window --toggle zoom-fullscreen

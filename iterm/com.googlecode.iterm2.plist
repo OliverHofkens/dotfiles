@@ -1413,23 +1413,23 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>482 213 918 205 0 0 1920 1080 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>650 516 620 392 0 0 1920 1080 </string>
+	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>497 444 1018 447 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>24 24 1872 1032 0 0 1920 1080 </string>
+	<string>22 347 1636 681 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>24 31 883 1025 0 0 1920 1080 </string>
+	<string>22 22 298 311 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>24 31 1870 1025 0 0 1920 1080 </string>
+	<string>334 22 1324 311 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>927 31 967 500 0 0 1920 1080 </string>
+	<string>22 22 1636 1006 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>24 31 883 500 0 0 1920 1080 </string>
+	<string>847 21 811 375 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>1520 31 372 1025 0 0 1920 1080 </string>
+	<string>1244 24 651 507 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
 	<string>1207 31 687 1025 0 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
@@ -1620,7 +1620,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.35717648237179495</real>
+			<real>0.42760778069653727</real>
 			<key>Blink Allowed</key>
 			<true/>
 			<key>Blinking Cursor</key>
@@ -1628,7 +1628,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>19.458044495558376</real>
+			<real>27.763073048857869</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -2074,7 +2074,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.046399111675126906</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -2099,19 +2099,27 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.2</string>
-		<string>3.3.1</string>
-		<string>3.2.8</string>
-		<string>3.3.0</string>
-		<string>3.3.3</string>
 		<string>3.3.6</string>
+		<string>3.2.8</string>
+		<string>3.3.1</string>
+		<string>3.3.3</string>
+		<string>3.3.7</string>
+		<string>3.3.0</string>
+		<string>3.3.2</string>
 	</array>
-	<key>NoSyncFrame_SharedPreferences</key>
+	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1920, 1080}}</string>
 		<key>topLeft</key>
-		<string>{859, 955}</string>
+		<string>{657, 939}</string>
+	</dict>
+	<key>NoSyncFrame_SharedPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{0, 0}, {1680, 1050}}</string>
+		<key>topLeft</key>
+		<string>{204, 741}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -2122,7 +2130,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>F19A4656-403C-492F-819B-3E060D8B4476</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>55</integer>
+	<integer>69</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2864,6 +2872,7 @@
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
+		<string>bool</string>
 		<string>setuptools</string>
 		<string>sety</string>
 		<string>Engine</string>
@@ -2873,7 +2882,6 @@
 		<string>slp_B_1_4</string>
 		<string>slp_H_8_2</string>
 		<string>slp_L_1_1</string>
-		<string>slp_D_4_5</string>
 	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>568571026.33144605</real>
@@ -2927,7 +2935,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-10-22T06:53:54Z</date>
+	<date>2019-11-21T15:48:32Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2935,7 +2943,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>ShowPaneTitles</key>
@@ -2951,7 +2959,7 @@
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TabStyleWithAutomaticOption</key>
-	<integer>2</integer>
+	<integer>3</integer>
 	<key>TerminalMargin</key>
 	<integer>25</integer>
 	<key>TerminalVMargin</key>
@@ -2971,7 +2979,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.6</string>
+	<string>3.3.7</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>

@@ -6,6 +6,7 @@
     "editor.dragAndDrop": false,
     "explorer.openEditors.visible": 0,
     "editor.rulers": [
+        80,
         88
     ],
     "editor.selectionHighlight": false,
