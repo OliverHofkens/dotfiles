@@ -54,6 +54,6 @@ yabai -m space 4 --padding abs:0:0:0:0
 yabai -m space 9 --padding abs:0:0:0:0
 
 # Specific rules
-yabai -m rule --add app=gramps manage=off
+yabai -m rule --add app=Gramps manage=off
 
 echo "yabai configuration loaded.."
