@@ -38,6 +38,7 @@ let g:deoplete#enable_at_startup=1
 " Linting
 let g:ale_completion_enabled=1
 let g:ale_fix_on_save=1
+let g:ale_python_auto_pipenv=1
 let g:ale_fixers={
 \ 'python': [
 \       'remove_trailing_lines',
