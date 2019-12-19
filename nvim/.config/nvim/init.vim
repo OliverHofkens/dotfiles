@@ -7,6 +7,8 @@ call plug#begin(stdpath('data') . '/plugged')
 " General
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'Yggdroot/indentLine'
+Plug 'vim-airline/vim-airline'
 " Search
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
