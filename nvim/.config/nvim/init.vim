@@ -22,12 +22,15 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Theme
+Plug 'danilo-augusto/vim-afterglow'
 call plug#end()			" Init plugin system
 
 " NERDTree & related:
 map <C-b> :NERDTreeToggle<CR>
 
 let g:NERDTreeLimitedSyntax = 1  " PERF: Don't highlight uncommon filetypes.
+let NERDTreeShowHidden=1         " Show hidden files
 
 " Syntax
 let g:python_highlight_all = 1
@@ -76,3 +79,6 @@ set ruler			" Show row and column ruler information
 set undolevels=1000		" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
 
+" Theme
+colorscheme afterglow
+let g:afterglow_blackout=1
