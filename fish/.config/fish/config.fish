@@ -8,6 +8,7 @@ alias dkr-dynamo="docker run -d -p 8000:8000 deangiberson/aws-dynamodb-local"
 alias pip3='python3 -m pip'
 alias mpd='mpd ~/.config/mpd/mpd.conf'
 alias ls="lsd"
+alias blender="/Applications/Blender.app/Contents/MacOS/Blender"
 
 
 thefuck --alias | source

@@ -17,6 +17,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 " Syntax
 Plug 'vim-python/python-syntax'
+Plug 'rust-lang/rust.vim'
 " Linting and autocomplete
 Plug 'dense-analysis/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -44,6 +45,7 @@ let g:deoplete#enable_at_startup=1
 let g:ale_completion_enabled=1
 let g:ale_fix_on_save=1
 let g:ale_python_auto_pipenv=1
+let g:ale_linters={'rust': ['rls']}
 let g:ale_fixers={
 \ 'python': [
 \       'remove_trailing_lines',
@@ -56,6 +58,8 @@ let g:ale_fixers={
 " General
 syntax on
 filetype plugin on
+
+let mapleader=" "
 
 set number			" Show line numbers
 set linebreak			" Break lines at word (requires Wrap lines)
