@@ -55,5 +55,6 @@ yabai -m space 9 --padding abs:0:0:0:0
 
 # Specific rules
 yabai -m rule --add app=Gramps manage=off
+yabai -m rule --add app=Blender manage=off
 
 echo "yabai configuration loaded.."

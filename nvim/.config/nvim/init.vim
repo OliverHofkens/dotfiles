@@ -15,12 +15,15 @@ Plug 'junegunn/fzf.vim'
 " VCS
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
-" Syntax
+" Syntax and language extras
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
-" Linting and autocomplete
+Plug 'davidhalter/jedi-vim'
+" Linting
 Plug 'dense-analysis/ale'
+" Autocomplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-jedi'
 " File browser
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -37,6 +40,11 @@ let NERDTreeShowHidden=1         " Show hidden files
 
 " Syntax
 let g:python_highlight_all = 1
+
+" Language extras
+" Completions already handled by deoplete
+let g:jedi#completions_enabled = 0
+let g:jedi#use_tabs_not_buffers = 0
 
 " Autocomplete
 let g:deoplete#enable_at_startup=1
@@ -79,6 +87,7 @@ set shiftwidth=4		" Number of auto-indent spaces
 set smartindent			" Enable smart-indent
 set smarttab			" Enable smart-tabs
 set softtabstop=4		" Number of spaces per Tab
+set expandtab
 
 set ruler			" Show row and column ruler information
 
