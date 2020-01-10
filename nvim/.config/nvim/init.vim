@@ -31,6 +31,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'danilo-augusto/vim-afterglow'
 call plug#end()			" Init plugin system
 
+" Signify
+let g:signify_sign_change = "~"
+
 " NERDTree & related:
 map <C-b> :NERDTreeToggle<CR>
 
