@@ -27,7 +27,6 @@ Plug 'deoplete-plugins/deoplete-jedi'
 " File browser
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Theme
 Plug 'danilo-augusto/vim-afterglow'
 call plug#end()			" Init plugin system
@@ -56,7 +55,6 @@ let g:ale_python_auto_pipenv=1
 let g:ale_linters={'rust': ['rls']}
 let g:ale_fixers={
 \ 'python': [
-\       'remove_trailing_lines',
 \	'black',
 \	'isort'
 \ ],
