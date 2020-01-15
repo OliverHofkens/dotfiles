@@ -32,6 +32,7 @@ Plug 'danilo-augusto/vim-afterglow'
 call plug#end()			" Init plugin system
 
 " Signify
+let g:signify_vcs_list=['git']
 let g:signify_sign_change = "~"
 
 " NERDTree & related:
@@ -39,6 +40,9 @@ map <C-b> :NERDTreeToggle<CR>
 
 let g:NERDTreeLimitedSyntax = 1  " PERF: Don't highlight uncommon filetypes.
 let NERDTreeShowHidden=1         " Show hidden files
+
+" Search
+nnoremap <c-p> :Files<cr>
 
 " Syntax
 let g:python_highlight_all = 1
