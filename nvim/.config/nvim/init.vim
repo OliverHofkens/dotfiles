@@ -31,6 +31,15 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'danilo-augusto/vim-afterglow'
 call plug#end()			" Init plugin system
 
+" Window management
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
+
 " Signify
 let g:signify_vcs_list=['git']
 let g:signify_sign_change = "~"
@@ -56,7 +65,7 @@ let g:jedi#use_tabs_not_buffers = 0
 let g:deoplete#enable_at_startup=1
 
 " Linting
-let g:ale_completion_enabled=1
+let g:ale_completion_enabled=0
 let g:ale_fix_on_save=1
 let g:ale_python_auto_pipenv=1
 let g:ale_linters={'rust': ['rls']}
