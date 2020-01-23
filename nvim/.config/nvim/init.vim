@@ -60,9 +60,11 @@ let g:python_highlight_all = 1
 " Completions already handled by deoplete
 let g:jedi#completions_enabled = 0
 let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#use_splits_not_buffers = "winwidth"
 
 " Autocomplete
 let g:deoplete#enable_at_startup=1
+call deoplete#custom#option('auto_complete_delay', 200)
 
 " Linting
 let g:ale_completion_enabled=0
