@@ -110,5 +110,5 @@ set undolevels=1000		" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
 
 " Theme
+let g:afterglow_inherit_background = 1
 colorscheme afterglow
-let g:afterglow_blackout=1
