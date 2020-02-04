@@ -51,6 +51,18 @@ let g:NERDTreeLimitedSyntax = 1  " PERF: Don't highlight uncommon filetypes.
 let NERDTreeShowHidden=1         " Show hidden files
 
 " Search
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+let g:fzf_action = {
+  \ 'ctrl-q': function('s:build_quickfix_list'),
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+
 nnoremap <c-p> :Files<cr>
 
 " Syntax
@@ -77,6 +89,7 @@ let g:ale_fixers={
 \	'isort'
 \ ],
 \ 'rust': ['rustfmt'],
+\ 'json': ['jq']
 \}
 
 " General
