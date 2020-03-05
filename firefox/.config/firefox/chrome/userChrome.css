@@ -1,79 +1,27 @@
-/* Bars on bottom */
-#browser { -moz-box-ordinal-group: 0 !important; }
-#urlbar-container .urlbarView { top: unset !important; bottom: 31px; }
-
-/* Compact URL bar */
-:root[uidensity=compact] #urlbar,
-:root[uidensity=compact] .searchbar-textbox {
-    font-size: 12px !important;
-    min-height: 24px !important;
-}
-:root[uidensity=compact] #identity-box { max-height: 22px; }
-:root[uidensity=compact] #nav-bar .toolbarbutton-1 { padding: 0px !important; }
-
-/* Hide URL bar border */
-#urlbar { border: 0 !important; }
-#urlbar[focused="true"] {
-    -moz-appearance: none !important;
-    box-shadow: none !important;
-    border: 0 !important;
+/* Hide navbar when not in focus */
+#nav-bar {
+  position: relative;
+  z-index: 1;
+  height: 4px;
+  margin-bottom: -4px;
+  opacity: 0;
+  overflow: hidden;
+  min-height:4px !important;
 }
 
-/* Show tab bar on hover over URL bar */
-#navigator-toolbox:not(:hover) #titlebar { z-index: -1 !important; }
-#titlebar {
-    position: fixed;
-    margin-bottom: -30px;
-    margin-right: 200px;
-    background: #000;
-    z-index: 2;
+#nav-bar:focus-within {
+  height: auto;
+  margin-bottom: 0px;
+  opacity: 1;
+  overflow: show;
 }
 
-/* Move status panel over URL bar */
-#statuspanel {
-    margin-top: -9.5px !important;
-    margin-left: 1px !important;
-    transition: none !important;
-    z-index: 1;
-}
-#statuspanel-label {
-    color: #fff !important;
-    background: #000 !important;
-    border-color: #000 !important;
-    border-radius: 0 !important;
-    padding-right: 16px !important;
+/* Only show close buttons on tabs when hovering with the mouse */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: none !important;
 }
 
-/* Monospace font */
-#urlbar-container, #statuspanel-label
-{ font-family: Menlo; font-size: 12px !important; }
-#urlbar-container .urlbarView-title,
-#urlbar-container .urlbarView-title-separator,
-#urlbar-container .urlbarView-tags,
-#urlbar-container .urlbarView-action,
-#urlbar-container .urlbarView-url
-{ font-size: 12px !important; }
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: -moz-box !important;
+}
 
-/* No rounded corners */
-#urlbar-container .urlbarView-row
-{ border-radius: 0 !important; }
-
-/* Grayscale colors */
-/*.tabbrowser-tab .tab-icon-image { filter: grayscale(100%) !important; }*/
-#userContext-label { color: #7f7f7f !important; }
-
-/* Hide unnecessary elements */
-#urlbar .search-one-offs,
-#urlbar .urlbar-history-dropmarker,
-#back-button, #forward-button,
-#tracking-protection-icon-container,
-#identity-box.verifiedDomain,
-#identity-box.verifiedIdentity,
-#identity-box.mixedActiveBlocked,
-#userContext-indicator,
-#pageActionButton,
-#pageActionSeparator,
-#star-button,
-#tabbrowser-tabs .tabbrowser-tab[selected] .tab-line,
-#tabbrowser-tabs .tabbrowser-tab[usercontextid] .tab-bottom-line
-{ display: none !important; }
