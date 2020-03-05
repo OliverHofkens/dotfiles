@@ -49,6 +49,7 @@ map <C-b> :NERDTreeToggle<CR>
 
 let g:NERDTreeLimitedSyntax = 1  " PERF: Don't highlight uncommon filetypes.
 let NERDTreeShowHidden=1         " Show hidden files
+let NERDTreeQuitOnOpen = 1       " Quit after opening a file 
 
 " Search
 function! s:build_quickfix_list(lines)
@@ -73,6 +74,10 @@ let g:python_highlight_all = 1
 let g:jedi#completions_enabled = 0
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#use_splits_not_buffers = "winwidth"
+
+" Comments
+let g:NERDDefaultAlign = 'left'
+let g:NERDToggleCheckAllLines = 1
 
 " Autocomplete
 let g:deoplete#enable_at_startup=1
