@@ -1,5 +1,5 @@
 " Python plugin system
-let g:python3_host_prog='/Users/oliver/.local/share/virtualenvs/.python-nvim-venv---J-hpZ7/bin/python'
+let g:python3_host_prog='/Users/oliver/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/python'
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -86,7 +86,6 @@ call deoplete#custom#option('auto_complete_delay', 200)
 " Linting
 let g:ale_completion_enabled=0
 let g:ale_fix_on_save=1
-let g:ale_python_auto_pipenv=1
 let g:ale_linters={'rust': ['rls']}
 let g:ale_fixers={
 \ 'python': [
