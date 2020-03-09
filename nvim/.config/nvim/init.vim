@@ -1,5 +1,5 @@
 " Python plugin system
-let g:python3_host_prog='/Users/oliver/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/python'
+let g:python3_host_prog='~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/python'
 
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
@@ -95,6 +95,10 @@ let g:ale_fixers={
 \ 'rust': ['rustfmt'],
 \ 'json': ['jq']
 \}
+let g:ale_python_black_executable = "~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/black" 
+let g:ale_python_isort_executable = "~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/isort"
+let g:ale_python_flake8_executable = "~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/flake8"
+let g:ale_python_mypy_executable = "~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/mypy"
 
 " General
 syntax on
