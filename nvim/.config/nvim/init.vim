@@ -60,8 +60,8 @@ endfunction
 
 let g:fzf_action = {
   \ 'ctrl-q': function('s:build_quickfix_list'),
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
+  \ 'ctrl-i': 'split',
+  \ 'ctrl-s': 'vsplit' }
 let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
 
 nnoremap <c-p> :Files<cr>
