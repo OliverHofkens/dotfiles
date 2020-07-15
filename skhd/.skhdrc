@@ -1,5 +1,5 @@
-ctrl - r : yabai -m space --rotate 90
-ctrl - f : yabai -m window --toggle zoom-fullscreen
+alt - r : yabai -m space --rotate 90
+alt - f : yabai -m window --toggle zoom-fullscreen
 alt - p : yabai -m window --toggle sticky;\
           yabai -m window --toggle topmost;\
           yabai -m window --toggle border;\

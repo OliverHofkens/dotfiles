@@ -48,8 +48,9 @@ let g:signify_sign_change = "~"
 map <C-b> :NERDTreeToggle<CR>
 
 let g:NERDTreeLimitedSyntax = 1  " PERF: Don't highlight uncommon filetypes.
-let NERDTreeShowHidden=1         " Show hidden files
-let NERDTreeQuitOnOpen = 1       " Quit after opening a file 
+let g:NERDTreeShowHidden=1         " Show hidden files
+let g:NERDTreeQuitOnOpen = 1       " Quit after opening a file 
+let g:NERDTreeIgnore = ['^.DS_Store$']
 
 " Search
 function! s:build_quickfix_list(lines)
