@@ -50,7 +50,7 @@ map <C-b> :NERDTreeToggle<CR>
 let g:NERDTreeLimitedSyntax = 1  " PERF: Don't highlight uncommon filetypes.
 let g:NERDTreeShowHidden=1         " Show hidden files
 let g:NERDTreeQuitOnOpen = 1       " Quit after opening a file 
-let g:NERDTreeIgnore = ['^.DS_Store$']
+let g:NERDTreeIgnore = ['^.DS_Store$', '^__pycache__$']
 
 " Search
 function! s:build_quickfix_list(lines)
@@ -94,7 +94,15 @@ let g:ale_fixers={
 \	'isort'
 \ ],
 \ 'rust': ['rustfmt'],
-\ 'json': ['jq']
+\ 'json': ['jq'],
+\ 'javascript': [
+\       'prettier', 
+\       'eslint'
+\ ],
+\ 'vue': [
+\       'prettier', 
+\       'eslint'
+\ ]
 \}
 let g:ale_python_black_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/black")
 let g:ale_python_isort_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/isort")
