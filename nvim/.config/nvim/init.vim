@@ -108,6 +108,7 @@ let g:ale_python_black_executable = expand("~/.local/share/virtualenvs/nvim-pyth
 let g:ale_python_isort_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/isort")
 let g:ale_python_flake8_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/flake8")
 let g:ale_python_mypy_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/mypy")
+let g:ale_yaml_yamllint_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/yamllint")
 
 " General
 syntax on
