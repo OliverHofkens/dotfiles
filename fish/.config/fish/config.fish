@@ -1,15 +1,7 @@
 set PATH $HOME/.cargo/bin $PATH
 
-alias vim="/Applications/MacVim.app/Contents/bin/mvim -v"
-alias vagrant="cd ~/saki; and vagrant"
-alias dkr-redis="docker run -d -p 6379:6379 redis"
-alias dkr-mysql="docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=admin  mysql:latest"
-alias dkr-dynamo="docker run -d -p 8000:8000 deangiberson/aws-dynamodb-local"
 alias pip3='python3 -m pip'
-alias mpd='mpd ~/.config/mpd/mpd.conf'
 alias ls="lsd"
-alias blender="/Applications/Blender.app/Contents/MacOS/Blender"
-
 
 thefuck --alias | source
 status --is-interactive; and source (pyenv init -|psub)
@@ -25,3 +17,10 @@ direnv hook fish | source
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [ -f /Users/oliver/repos/nove-0037-barry-web/node_modules/tabtab/.completions/slss.fish ]; and . /Users/oliver/repos/nove-0037-barry-web/node_modules/tabtab/.completions/slss.fish
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/ncurses/bin" $fish_user_paths
+
+# Created by `userpath` on 2020-02-28 07:28:32
+set PATH $PATH /Users/oliver/.local/bin
+
+starship init fish | source

@@ -8,9 +8,10 @@ verify_ssl = true
 [packages]
 neovim = "*"
 flake8 = "*"
-isort = {extras = ["pipfile"],version = "*"}
+isort = "*"
 black = "==20.8b1"
 mypy = "*"
+yamllint = "*"
 
 [requires]
 python_version = "3.8"
