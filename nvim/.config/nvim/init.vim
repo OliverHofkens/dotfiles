@@ -5,6 +5,7 @@ let g:python3_host_prog = expand('~/.local/share/virtualenvs/nvim-python-env-sjx
 " - For Neovim: stdpath('data') . '/plugged'
 call plug#begin(stdpath('data') . '/plugged')
 " General
+Plug 'tpope/vim-sensible'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
