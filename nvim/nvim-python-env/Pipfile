@@ -12,6 +12,7 @@ isort = "*"
 black = "==20.8b1"
 mypy = "*"
 yamllint = "*"
+jedi = "*"
 
 [requires]
 python_version = "3.8"
