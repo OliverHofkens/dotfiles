@@ -20,6 +20,8 @@ Plug 'mhinz/vim-signify'
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
 Plug 'davidhalter/jedi-vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 " Linting
 Plug 'dense-analysis/ale'
 " Autocomplete
@@ -73,6 +75,7 @@ let g:python_highlight_all = 1
 
 " Language extras
 " Completions already handled by deoplete
+let g:omni_sql_no_default_maps = 1
 let g:jedi#completions_enabled = 0
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#use_splits_not_buffers = "winwidth"
@@ -97,6 +100,10 @@ let g:ale_fixers={
 \ 'rust': ['rustfmt'],
 \ 'json': ['jq'],
 \ 'javascript': [
+\       'prettier', 
+\       'eslint'
+\ ],
+\ 'typescript': [
 \       'prettier', 
 \       'eslint'
 \ ],
