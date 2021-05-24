@@ -91,7 +91,28 @@ call deoplete#custom#option('auto_complete_delay', 200)
 " Linting
 let g:ale_completion_enabled=0
 let g:ale_fix_on_save=1
-let g:ale_linters={'rust': ['rls']}
+let g:ale_linters={
+\ 'rust': [
+\        'rls'
+\ ],
+\ 'javascript': [
+\       'prettier', 
+\       'eslint'
+\ ],
+\ 'typescript': [
+\       'prettier', 
+\       'eslint'
+\ ],
+\ 'typescriptreact': [
+\       'prettier', 
+\       'eslint'
+\ ],
+\ 'vue': [
+\       'prettier', 
+\       'eslint'
+\ ]
+\}
+
 let g:ale_fixers={
 \ 'python': [
 \	'black',
@@ -104,6 +125,10 @@ let g:ale_fixers={
 \       'eslint'
 \ ],
 \ 'typescript': [
+\       'prettier', 
+\       'eslint'
+\ ],
+\ 'typescriptreact': [
 \       'prettier', 
 \       'eslint'
 \ ],
