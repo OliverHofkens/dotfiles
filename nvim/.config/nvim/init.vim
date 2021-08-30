@@ -15,7 +15,8 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 " VCS
 Plug 'tpope/vim-fugitive'
-Plug 'mhinz/vim-signify'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 " Syntax and language extras
 Plug 'vim-python/python-syntax'
 Plug 'rust-lang/rust.vim'
@@ -43,9 +44,15 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-" Signify
-let g:signify_vcs_list=['git']
-let g:signify_sign_change = "~"
+" Git signs
+lua << EOF
+require('gitsigns').setup{
+  signs = {
+    add = {text = '+'},
+    change = {text = '~'},
+  },
+}
+EOF
 
 " NERDTree & related:
 map <C-b> :NERDTreeToggle<CR>
