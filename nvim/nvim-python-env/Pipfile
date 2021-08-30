@@ -9,10 +9,10 @@ verify_ssl = true
 neovim = "*"
 flake8 = "*"
 isort = "*"
-black = "==20.8b1"
+black = "==21.8b0"
 mypy = "*"
 yamllint = "*"
 jedi = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.7"
