@@ -100,6 +100,7 @@ let g:ale_completion_enabled=0
 let g:ale_fix_on_save=1
 let g:ale_linters={
 \ 'rust': [
+\        'cargo',
 \        'rls'
 \ ],
 \ 'javascript': [
@@ -149,6 +150,7 @@ let g:ale_python_isort_executable = expand("~/.local/share/virtualenvs/nvim-pyth
 let g:ale_python_flake8_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/flake8")
 let g:ale_python_mypy_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/mypy")
 let g:ale_yaml_yamllint_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/yamllint")
+let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 
 " General
 syntax on
