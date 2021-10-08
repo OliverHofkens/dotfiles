@@ -10,6 +10,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-airline/vim-airline'
+" Discipline
+Plug 'takac/vim-hardtime'
 " Search
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -35,14 +37,14 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'danilo-augusto/vim-afterglow'
 call plug#end()			" Init plugin system
 
-" Window management
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
-set splitbelow
-set splitright
+" HardTime
+let g:hardtime_default_on = 1
+let g:hardtime_showmsg = 1
+let g:hardtime_ignore_buffer_patterns = [ "NERD.*" ]
+let g:hardtime_ignore_quickfix = 1
+let g:hardtime_maxcount = 2
+let g:hardtime_allow_different_key = 1
 
 " Git signs
 lua << EOF
@@ -132,6 +134,7 @@ let g:ale_fixers={
 \       'prettier', 
 \       'eslint'
 \ ],
+\ 'terraform': ['terraform'],
 \ 'typescript': [
 \       'prettier', 
 \       'eslint'
@@ -152,11 +155,24 @@ let g:ale_python_mypy_executable = expand("~/.local/share/virtualenvs/nvim-pytho
 let g:ale_yaml_yamllint_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/yamllint")
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 
+" Window management
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
+
 " General
 syntax on
 filetype plugin on
 
 let mapleader=" "
+inoremap jj <ESC>
+
+set splitbelow
+set splitright
 
 set number			" Show line numbers
 set linebreak			" Break lines at word (requires Wrap lines)
