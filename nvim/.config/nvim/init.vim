@@ -124,11 +124,13 @@ let g:ale_linters={
 \}
 
 let g:ale_fixers={
+\ 'css': ['prettier'],
 \ 'python': [
 \	'black',
 \	'isort'
 \ ],
 \ 'rust': ['rustfmt'],
+\ 'html': ['prettier'],
 \ 'json': ['jq'],
 \ 'javascript': [
 \       'prettier', 
@@ -155,6 +157,12 @@ let g:ale_python_mypy_executable = expand("~/.local/share/virtualenvs/nvim-pytho
 let g:ale_yaml_yamllint_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/yamllint")
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 
+" For documentation files, enable text wrapping and spell checking
+augroup docs_config
+  autocmd!
+  autocmd BufRead,BufNewFile *.md,*.rst setlocal textwidth=80 spell spelllang=en
+augroup END
+
 " Window management
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -174,7 +182,7 @@ inoremap jj <ESC>
 set splitbelow
 set splitright
 
-set number			" Show line numbers
+set number relativenumber	" Show hyrbid line numbers
 set linebreak			" Break lines at word (requires Wrap lines)
 set showbreak=+++		" Wrap-broken line prefix
 set colorcolumn=80              " Visual ruler
