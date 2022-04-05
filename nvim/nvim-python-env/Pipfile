@@ -9,7 +9,7 @@ verify_ssl = true
 neovim = "*"
 flake8 = "*"
 isort = "*"
-black = "==21.8b0"
+black = "*"
 mypy = "*"
 yamllint = "*"
 jedi = "*"

@@ -95,7 +95,7 @@ let g:NERDToggleCheckAllLines = 1
 
 " Autocomplete
 let g:deoplete#enable_at_startup=1
-call deoplete#custom#option('auto_complete_delay', 200)
+call deoplete#custom#option('auto_complete_delay', 100)
 
 " Linting
 let g:ale_completion_enabled=0
@@ -177,7 +177,6 @@ syntax on
 filetype plugin on
 
 let mapleader=" "
-inoremap jj <ESC>
 
 set splitbelow
 set splitright
