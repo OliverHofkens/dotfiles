@@ -1,42 +1,37 @@
-" Python plugin system
-let g:python3_host_prog = expand('~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/python')
-
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
 call plug#begin(stdpath('data') . '/plugged')
+
 " General
+Plug 'nvim-lua/plenary.nvim'
 Plug 'tpope/vim-sensible'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
-Plug 'vim-airline/vim-airline'
-" Discipline
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'takac/vim-hardtime'
+
 " Search
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
 " VCS
 Plug 'tpope/vim-fugitive'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+
 " Syntax and language extras
-Plug 'vim-python/python-syntax'
-Plug 'rust-lang/rust.vim'
-Plug 'davidhalter/jedi-vim'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-" Linting
-Plug 'dense-analysis/ale'
-" Autocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'neovim/nvim-lspconfig'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " File browser
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+
 " Theme
 Plug 'danilo-augusto/vim-afterglow'
+
 call plug#end()			" Init plugin system
 
+lua require("cfg")
 
 " HardTime
 let g:hardtime_default_on = 1
@@ -46,22 +41,12 @@ let g:hardtime_ignore_quickfix = 1
 let g:hardtime_maxcount = 2
 let g:hardtime_allow_different_key = 1
 
-" Git signs
-lua << EOF
-require('gitsigns').setup{
-  signs = {
-    add = {text = '+'},
-    change = {text = '~'},
-  },
-}
-EOF
-
 " NERDTree & related:
 map <C-b> :NERDTreeToggle<CR>
 
 let g:NERDTreeLimitedSyntax = 1  " PERF: Don't highlight uncommon filetypes.
 let g:NERDTreeShowHidden=1         " Show hidden files
-let g:NERDTreeQuitOnOpen = 1       " Quit after opening a file 
+let g:NERDTreeQuitOnOpen = 1       " Quit after opening a file
 let g:NERDTreeIgnore = ['^.DS_Store$', '^__pycache__$']
 
 " Search
@@ -71,91 +56,9 @@ function! s:build_quickfix_list(lines)
   cc
 endfunction
 
-let g:fzf_action = {
-  \ 'ctrl-q': function('s:build_quickfix_list'),
-  \ 'ctrl-i': 'split',
-  \ 'ctrl-s': 'vsplit' }
-let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
-
-nnoremap <c-p> :Files<cr>
-
-" Syntax
-let g:python_highlight_all = 1
-
-" Language extras
-" Completions already handled by deoplete
-let g:omni_sql_no_default_maps = 1
-let g:jedi#completions_enabled = 0
-let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#use_splits_not_buffers = "winwidth"
-
 " Comments
 let g:NERDDefaultAlign = 'left'
 let g:NERDToggleCheckAllLines = 1
-
-" Autocomplete
-let g:deoplete#enable_at_startup=1
-call deoplete#custom#option('auto_complete_delay', 100)
-
-" Linting
-let g:ale_completion_enabled=0
-let g:ale_fix_on_save=1
-let g:ale_linters={
-\ 'rust': [
-\        'cargo',
-\        'rls'
-\ ],
-\ 'javascript': [
-\       'prettier', 
-\       'eslint'
-\ ],
-\ 'typescript': [
-\       'prettier', 
-\       'eslint'
-\ ],
-\ 'typescriptreact': [
-\       'prettier', 
-\       'eslint'
-\ ],
-\ 'vue': [
-\       'prettier', 
-\       'eslint'
-\ ]
-\}
-
-let g:ale_fixers={
-\ 'css': ['prettier'],
-\ 'python': [
-\	'black',
-\	'isort'
-\ ],
-\ 'rust': ['rustfmt'],
-\ 'html': ['prettier'],
-\ 'json': ['jq'],
-\ 'javascript': [
-\       'prettier', 
-\       'eslint'
-\ ],
-\ 'terraform': ['terraform'],
-\ 'typescript': [
-\       'prettier', 
-\       'eslint'
-\ ],
-\ 'typescriptreact': [
-\       'prettier', 
-\       'eslint'
-\ ],
-\ 'vue': [
-\       'prettier', 
-\       'eslint'
-\ ]
-\}
-let g:ale_python_black_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/black")
-let g:ale_python_isort_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/isort")
-let g:ale_python_flake8_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/flake8")
-let g:ale_python_mypy_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/mypy")
-let g:ale_yaml_yamllint_executable = expand("~/.local/share/virtualenvs/nvim-python-env-sjxtMNZd/bin/yamllint")
-let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 
 " For documentation files, enable text wrapping and spell checking
 augroup docs_config
