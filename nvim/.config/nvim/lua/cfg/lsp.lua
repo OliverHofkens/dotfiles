@@ -34,10 +34,10 @@ null_ls.setup({
   -- debug = true,
   sources = {
     -- Python:
-    diag.flake8,
-    diag.mypy,
-    fmt.black,
-    fmt.isort,
+    diag.flake8.with({ prefer_local = ".venv/bin" }),
+    diag.mypy.with({ prefer_local = ".venv/bin" }),
+    fmt.black.with({ prefer_local = ".venv/bin" }),
+    fmt.isort.with({ prefer_local = ".venv/bin" }),
 
     -- Rust:
     fmt.rustfmt,
