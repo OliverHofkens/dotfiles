@@ -49,13 +49,6 @@ let g:NERDTreeShowHidden=1         " Show hidden files
 let g:NERDTreeQuitOnOpen = 1       " Quit after opening a file
 let g:NERDTreeIgnore = ['^.DS_Store$', '^__pycache__$']
 
-" Search
-function! s:build_quickfix_list(lines)
-  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
-  copen
-  cc
-endfunction
-
 " Comments
 let g:NERDDefaultAlign = 'left'
 let g:NERDToggleCheckAllLines = 1
