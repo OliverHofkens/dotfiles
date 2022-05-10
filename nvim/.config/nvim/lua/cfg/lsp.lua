@@ -1,3 +1,5 @@
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
   vim.g.SuperTabDefaultCompletionType = "context"
@@ -17,13 +19,17 @@ local on_attach = function(client, bufnr)
   buf_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
   buf_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 
-  if client.resolved_capabilities.document_formatting then
-    vim.cmd([[
-      augroup lsp_format
-        autocmd!
-        autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync(nil, 2000)
-      augroup END
-    ]])
+  -- https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save
+  if client.supports_method("textDocument/formatting") then
+        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            group = augroup,
+            buffer = bufnr,
+            callback = function()
+                -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+                vim.lsp.buf.formatting_sync()
+            end,
+        })
   end
 end
 
@@ -31,7 +37,7 @@ local null_ls = require("null-ls")
 local diag = null_ls.builtins.diagnostics
 local fmt = null_ls.builtins.formatting
 null_ls.setup({
-  -- debug = true,
+  debug = true,
   sources = {
     -- Python:
     diag.flake8.with({ prefer_local = ".venv/bin" }),
