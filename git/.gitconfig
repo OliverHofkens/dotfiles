@@ -1,0 +1,10 @@
+[user]
+	name = Oliver Hofkens
+	email = oliver@gorilla.co
+
+[core]
+    editor = nvim
+    ignorecase = false
+
+[pull]
+    rebase = true
