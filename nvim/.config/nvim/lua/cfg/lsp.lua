@@ -9,7 +9,7 @@ local on_attach = function(client, bufnr)
   end
 
   local opts = { noremap = true, silent = true }
-  buf_set_keymap("n", "<leader>d", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+  buf_set_keymap("n", "<leader>d", "<cmd>vsplit<CR> | <cmd>lua vim.lsp.buf.definition()<CR>", opts)
   buf_set_keymap("n", "<leader>r", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
   buf_set_keymap("n", "<leader>k", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
   buf_set_keymap("n", "<leader>R", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
