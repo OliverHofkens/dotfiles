@@ -57,6 +57,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'takac/vim-hardtime'
+Plug 'ervandew/supertab'
 
 " Search
 Plug 'nvim-telescope/telescope.nvim'
@@ -94,9 +95,12 @@ let g:hardtime_allow_different_key = 1
 map <C-b> :NERDTreeToggle<CR>
 
 let g:NERDTreeLimitedSyntax = 1  " PERF: Don't highlight uncommon filetypes.
-let g:NERDTreeShowHidden=1         " Show hidden files
+let g:NERDTreeShowHidden = 1         " Show hidden files
 let g:NERDTreeQuitOnOpen = 1       " Quit after opening a file
 let g:NERDTreeIgnore = ['^.DS_Store$', '^__pycache__$']
+
+" Completion
+let g:SuperTabClosePreviewOnPopupClose = 1
 
 " Comments
 let g:NERDDefaultAlign = 'left'
