@@ -51,6 +51,9 @@ null_ls.setup({
     -- Terraform
     fmt.terraform_fmt,
 
+    -- CHANGELOG
+    fmt.ocdc,
+
     -- diag.yamllint,
     fmt.prettier.with({ disabled_filetypes = { "yaml", "markdown" } }),
     diag.proselint.with({ filetypes = { "markdown", "rst", "tex" } }),
