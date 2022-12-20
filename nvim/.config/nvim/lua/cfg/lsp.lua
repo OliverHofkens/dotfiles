@@ -39,6 +39,9 @@ local fmt = null_ls.builtins.formatting
 null_ls.setup({
   debug = true,
   sources = {
+    -- Git:
+    diag.commitlint,
+
     -- Python:
     diag.flake8.with({ prefer_local = ".venv/bin" }),
     diag.mypy.with({ prefer_local = ".venv/bin" }),
