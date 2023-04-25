@@ -22,7 +22,7 @@ let mapleader=" "
 set splitbelow
 set splitright
 
-set number relativenumber	" Show hyrbid line numbers
+set number relativenumber	" Show hybrid line numbers
 set linebreak			" Break lines at word (requires Wrap lines)
 set showbreak=+++		" Wrap-broken line prefix
 set colorcolumn=80              " Visual ruler
@@ -46,7 +46,6 @@ set ruler			" Show row and column ruler information
 set undolevels=1000		" Number of undo levels
 set backspace=indent,eol,start	" Backspace behaviour
 
-
 call plug#begin(stdpath('data') . '/plugged')
 
 " General
@@ -54,7 +53,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'tpope/vim-sensible'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'Yggdroot/indentLine'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'takac/vim-hardtime'
 Plug 'ervandew/supertab'

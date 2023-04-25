@@ -61,6 +61,10 @@ null_ls.setup({
     fmt.prettier.with({ disabled_filetypes = { "yaml", "markdown" } }),
     diag.proselint.with({ filetypes = { "markdown", "rst", "tex" } }),
 
+    -- Web
+    fmt.djlint,
+    diag.djlint,
+
     -- Defaults:
     fmt.trim_newlines,
     fmt.trim_whitespace,
