@@ -71,8 +71,8 @@ Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " File browser
-Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-tree/nvim-web-devicons'
 
 " Theme
 Plug 'danilo-augusto/vim-afterglow'
@@ -88,14 +88,6 @@ let g:hardtime_ignore_buffer_patterns = [ "NERD.*" ]
 let g:hardtime_ignore_quickfix = 1
 let g:hardtime_maxcount = 2
 let g:hardtime_allow_different_key = 1
-
-" NERDTree & related:
-map <C-b> :NERDTreeToggle<CR>
-
-let g:NERDTreeLimitedSyntax = 1  " PERF: Don't highlight uncommon filetypes.
-let g:NERDTreeShowHidden = 1         " Show hidden files
-let g:NERDTreeQuitOnOpen = 1       " Quit after opening a file
-let g:NERDTreeIgnore = ['^.DS_Store$', '^__pycache__$']
 
 " Completion
 let g:SuperTabClosePreviewOnPopupClose = 1
