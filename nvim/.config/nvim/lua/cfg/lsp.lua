@@ -83,6 +83,7 @@ lspconfig.jedi_language_server.setup({
         ".venv/lib/python3.8/site-packages/",
         ".venv/lib/python3.9/site-packages/",
         ".venv/lib/python3.10/site-packages/",
+        ".venv/lib/python3.11/site-packages/",
       },
     },
   },
