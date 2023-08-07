@@ -1,8 +1,9 @@
-theme = "onedark"
+theme = "kulderzipken"
 
 [editor]
 line-number = "relative"
 mouse = false
+rulers = [80]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -11,3 +12,8 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.indent-guides]
+render = true
+character = "╎"
+skip-levels = 1
