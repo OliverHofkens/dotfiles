@@ -1,0 +1,16 @@
+[[language]]
+name = "python"
+roots = ["pyproject.toml", "poetry.lock", "setup.cfg"]
+auto-format = true
+
+[language.config]
+pylsp.configurationSources = "flake8"
+
+pylsp.plugins.flake8.enabled = true
+pylsp.plugins.black.enabled = true
+
+pylsp.plugins.autopep8.enabled = false
+pylsp.plugins.pycodestyle.enabled = false
+pylsp.plugins.pyflakes.enabled = false
+pylsp.plugins.pydocstyle.enabled = false
+pylsp.plugins.pylint.enabled = false
