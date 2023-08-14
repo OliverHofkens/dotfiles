@@ -17,3 +17,9 @@ hidden = false
 render = true
 character = "╎"
 skip-levels = 1
+
+# Add window split options to go-to-definition
+[keys.normal.g.d]
+d = ["goto_definition"]
+h = ["hsplit", "goto_definition"]
+v = ["vsplit", "goto_definition"]
