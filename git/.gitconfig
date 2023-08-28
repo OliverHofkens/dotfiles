@@ -3,8 +3,9 @@
 	email = oliver@gorilla.co
 
 [core]
-    editor = nvim
-    ignorecase = false
+	editor = hx
+	ignorecase = false
+	excludesfile = ~/.gitignore_global
 
 [pull]
     rebase = true
