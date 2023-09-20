@@ -6,7 +6,7 @@ fish_add_path -a ~/.local/bin
 pyenv init - | source
 direnv hook fish | source
 
-set -gx EDITOR nvim
+set -gx EDITOR hx
 
 if status is-interactive
     starship init fish | source
