@@ -14,3 +14,13 @@ pylsp.plugins.pycodestyle.enabled = false
 pylsp.plugins.pyflakes.enabled = false
 pylsp.plugins.pydocstyle.enabled = false
 pylsp.plugins.pylint.enabled = false
+
+
+[[language]]
+name = "markdown"
+auto-format = true
+
+
+[[language]]
+name = "rst"
+auto-format = true
