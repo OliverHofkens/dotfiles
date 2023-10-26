@@ -26,7 +26,7 @@ yabai -m config top_padding                  0
 yabai -m config bottom_padding               0
 yabai -m config left_padding                 0
 yabai -m config right_padding                0
-yabai -m config window_gap                   5
+yabai -m config window_gap                   10
 
 # Overrides
 #yabai -m space 1 --padding abs:0:0:0:0
