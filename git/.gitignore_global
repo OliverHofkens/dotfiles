@@ -1,5 +1,8 @@
 .DS_Store
 
+# Editor
+.helix/**
+
 # Python
 .mypy_cache
 .pytest_cache
