@@ -9,6 +9,7 @@ auto-format = true
 [[language]]
 name = "rst"
 auto-format = true
+language-servers = [ "esbonio" ]
 
 [language-server.pylsp.config]
 pylsp.configurationSources = "flake8"
@@ -21,3 +22,15 @@ pylsp.plugins.pycodestyle.enabled = false
 pylsp.plugins.pyflakes.enabled = false
 pylsp.plugins.pydocstyle.enabled = false
 pylsp.plugins.pylint.enabled = false
+
+[language-server.esbonio]
+command = "esbonio"
+
+[language-server.esbonio.config.server]
+logLevel = "debug"
+
+[language-server.esbonio.config.sphinx]
+# Note: for now, it seems themes also have to be installed in the same env as
+# Esbonio. It builds a `Sphinx` builder object in its own environment.
+pythonCommand = ["poetry", "run", "python"]
+buildCommand = ["poetry", "run", "sphinx-build", "-M", "html", "docs", "docs/_build" ]
