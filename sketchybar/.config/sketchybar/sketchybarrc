@@ -41,7 +41,7 @@ sketchybar --default updates=when_shown                    \
 # to indicate active and available mission control spaces
 
 
-SPACE_ICONS=("" "" "󱂛" "" "" "󰎈" "" "󰒱")
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8")
 
 for i in "${!SPACE_ICONS[@]}"
 do
@@ -79,7 +79,19 @@ sketchybar --add item clock right                              \
            --add item battery right                            \
            --set battery script="$PLUGIN_DIR/battery.sh"       \
                          update_freq=120                       \
-           --subscribe battery system_woke power_source_change
+           --subscribe battery system_woke power_source_change \
+															   \
+		   --add item disk right                               \
+		   --set disk script="$PLUGIN_DIR/disk.sh"             \
+		                 update_freq=600                       \
+															   \
+		   --add item ram right                                \
+		   --set ram script="$PLUGIN_DIR/ram.sh"               \
+		                 update_freq=10                        \
+															   \
+		   --add item cpu right                                \
+		   --set cpu script="$PLUGIN_DIR/cpu.sh"               \
+						update_freq=10
 
 ##### Finalizing Setup #####
 # The below command is only needed at the end of the initial configuration and
