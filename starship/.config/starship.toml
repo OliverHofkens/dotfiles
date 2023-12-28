@@ -1,0 +1,38 @@
+format = "$all${custom.aws_sso_expiry}$line_break$character"
+
+[aws]
+format = '[$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
+
+[aws.region_aliases]
+eu-west-1 = 'euw-1'
+
+[custom.aws_sso_expiry]
+command = "~/.config/aws_sso_expiry/target/release/aws_sso_expiry"
+when = """ test -n "${AWS_PROFILE}" """
+shell = "/bin/bash"
+format = '[$symbol ($output)]($style)'
+symbol = "󰥿"
+style = "bold yellow"
+
+[docker_context]
+disabled  = true
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[nodejs]
+disabled = true
+
+[terraform]
+format = '[$symbol$workspace]($style) '
+
+[package]
+format = "[$symbol$version]($style) "
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+version_format = "${major}.${minor}"
+
+[rust]
+format = '[$symbol($version )]($style)'
+version_format = "${major}.${minor}"
