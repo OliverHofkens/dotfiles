@@ -1,6 +1,10 @@
 directory: ~/Sync/Music
 library: ~/Sync/Music/beets-library.db
-plugins: fetchart embedart
+plugins: fetchart embedart fromfilename info edit
+
+paths:
+  default: $albumartist/$album%aunique{}/$track $title
+  singleton: $artist/Non-Album/$title
 
 fetchart:
   auto: true
