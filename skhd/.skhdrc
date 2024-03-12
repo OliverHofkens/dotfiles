@@ -1,6 +1,0 @@
-alt - r : yabai -m space --rotate 90
-alt - f : yabai -m window --toggle zoom-fullscreen
-alt - p : yabai -m window --toggle sticky;\
-          yabai -m window --toggle topmost;\
-          yabai -m window --toggle border;\
-          yabai -m window --toggle pip
