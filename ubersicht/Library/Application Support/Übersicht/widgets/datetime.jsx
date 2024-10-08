@@ -11,7 +11,7 @@ export const className = `
 
 const content = css`
   font-family: Curse of the Zombie, Impact;
-  font-size: 90px;
+  font-size: 60px;
   font-weight: normal;
   color: #000;
   text-align: left;
