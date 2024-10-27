@@ -1,10 +1,10 @@
 return {
-  'sainnhe/sonokai',
+  "sainnhe/sonokai",
   lazy = false,
   priority = 1000,
   config = function()
     vim.g.sonokai_enable_italic = true
     vim.g.sonokai_transparent_background = true
-    vim.cmd.colorscheme('sonokai')
-  end
+    vim.cmd.colorscheme("sonokai")
+  end,
 }
