@@ -3,7 +3,7 @@
 	email = oliver@gorilla.co
 
 [core]
-	editor = hx
+	editor = nvim
 	ignorecase = false
 	excludesfile = ~/.gitignore_global
 
