@@ -1,20 +1,25 @@
-[user]
-	name = Oliver Hofkens
-	email = oliver@gorilla.co
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+  path = config-personal-gh
+
+[includeIf "hasconfig:remote.*.url:git@bitbucket.org:gorillaco/**"]
+  path = config-gorilla-bb
 
 [core]
-	editor = nvim
-	ignorecase = false
-	excludesfile = ~/.gitignore_global
+  editor = nvim
+  ignorecase = false
+  excludesfile = ~/.gitignore_global
+
+[push]
+  autoSetupRemote = true
 
 [pull]
-    rebase = true
+  rebase = true
+
 [merge]
-	tool = kdiff3
+  tool = kdiff3
+
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[push]
-	autoSetupRemote = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
