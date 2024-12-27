@@ -11,6 +11,15 @@ return {
             },
           },
         },
+        yamlls = {
+          settings = {
+            yaml = {
+              format = {
+                enable = false,
+              },
+            },
+          },
+        },
       },
     },
   },
@@ -20,7 +29,7 @@ return {
     opts = {
       formatters_by_ft = {
         python = { "isort", "black" },
-        yaml = { "yamlfmt" },
+        yaml = {},
       },
     },
   },
