@@ -29,7 +29,7 @@ return {
     opts = {
       formatters_by_ft = {
         markdown = {},
-        python = { "ruff" },
+        python = { "ruff_format", "ruff_organize_imports" },
         yaml = {},
       },
     },
