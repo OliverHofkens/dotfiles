@@ -5,15 +5,15 @@ export const command = 'date "+%H:%M on %A the %dth"';
 export const refreshFrequency = 30000; // ms
 
 export const className = `
-  left: 750px;
-  bottom: 860px;
+  left: 29vw;
+  bottom: 59.5vh;
 `;
 
 const content = css`
   font-family:
     Polsyh,
     Comic Sans MS;
-  font-size: 50px;
+  font-size: 2vw;
   font-weight: normal;
   color: #000;
   text-align: left;
