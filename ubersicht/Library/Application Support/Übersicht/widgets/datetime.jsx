@@ -1,25 +1,26 @@
-import { css } from "uebersicht"
+import { css } from "uebersicht";
 
-export const command = "date \"+%a %F %H:%M\""
+export const command = 'date "+%H:%M on %A the %dth"';
 
-export const refreshFrequency = 30000 // ms
+export const refreshFrequency = 30000; // ms
 
 export const className = `
-  left: 40px;
-  bottom: 10px;
-`
+  left: 750px;
+  bottom: 860px;
+`;
 
 const content = css`
-  font-family: Curse of the Zombie, Impact;
-  font-size: 60px;
+  font-family:
+    Polsyh,
+    Comic Sans MS;
+  font-size: 50px;
   font-weight: normal;
   color: #000;
   text-align: left;
-`
+`;
 
 export const render = ({ output }) => (
   <div>
-    <h1 className={content}>{output.toUpperCase()}</h1>
+    <h1 className={content}>Captain, it's {output}</h1>
   </div>
-)
-
+);
