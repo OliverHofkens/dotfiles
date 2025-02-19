@@ -1,6 +1,6 @@
 import { css } from "uebersicht";
 
-export const command = 'date "+%H:%M on %A the %dth"';
+export const command = 'date "+%A the %dth, %H:%M"';
 
 export const refreshFrequency = 30000; // ms
 
@@ -16,7 +16,7 @@ const content = css`
   font-size: 2vw;
   font-weight: normal;
   color: #000;
-  text-align: left;
+  text-align: center;
 `;
 
 export const render = ({ output }) => (
