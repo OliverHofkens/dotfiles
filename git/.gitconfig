@@ -4,19 +4,56 @@
 [includeIf "hasconfig:remote.*.url:git@bitbucket.org:gorillaco/**"]
   path = config-gorilla-bb
 
+[branch]
+  sort = -committerdate
+
+[column]
+  ui = auto
+
 [core]
   editor = nvim
   ignorecase = false
   excludesfile = ~/.gitignore_global
 
-[push]
-  autoSetupRemote = true
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
 
-[pull]
-  rebase = true
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+
+[help]
+  autocorrect = prompt
+
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = true
+
+[push]
+  default = simple
+  autoSetupRemote = true
+  followTags = true
+
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+
+[rerere]
+  enabled = true
+  autoupdate = true
+
+[tag]
+  sort = version:refname
