@@ -1,0 +1,15 @@
+{
+  "dump": {
+    "NSGlobalDomain": [
+      "KeyRepeat"
+    ]
+  },
+  "values": {
+    "NSGlobalDomain": {
+      "KeyRepeat": {
+        "dtype": "integer",
+        "value": "1"
+      }
+    }
+  }
+}
