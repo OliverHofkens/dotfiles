@@ -1,7 +1,21 @@
 {
   "dump": {
-    "NSGlobalDomain": [
-      "KeyRepeat"
+    "NSGlobalDomain": ["KeyRepeat"],
+    "com.apple.dock": [
+      "autohide",
+      "autohide-time-modifier",
+      "autohide-delay",
+      "mru-spaces",
+      "show-recents",
+      "static-only",
+      "tilesize"
+    ],
+    "com.apple.finder": [
+      "AppleShowAllFiles",
+      "FXPreferredViewStyle",
+      "FXEnableExtensionChangeWarning",
+      "NSDocumentSaveNewDocumentsToCloud",
+      "ShowPathbar"
     ]
   },
   "values": {
@@ -10,6 +24,59 @@
         "dtype": "integer",
         "value": "1"
       }
+    },
+    "com.apple.dock": {
+      "autohide": {
+        "dtype": "boolean",
+        "value": "1"
+      },
+      "autohide-time-modifier": {
+        "dtype": "float",
+        "value": "0.1"
+      },
+      "autohide-delay": {
+        "dtype": "float",
+        "value": "0"
+      },
+      "mru-spaces": {
+        "dtype": "boolean",
+        "value": "0"
+      },
+      "show-recents": {
+        "dtype": "boolean",
+        "value": "0"
+      },
+      "static-only": {
+        "dtype": "boolean",
+        "value": "1"
+      },
+      "tilesize": {
+        "dtype": "float",
+        "value": "36"
+      }
+    },
+    "com.apple.finder": {
+      "AppleShowAllFiles": {
+        "dtype": "boolean",
+        "value": "1"
+      },
+      "FXPreferredViewStyle": {
+        "dtype": "string",
+        "value": "Nlsv"
+      },
+      "FXEnableExtensionChangeWarning": {
+        "dtype": "boolean",
+        "value": "0"
+      },
+      "NSDocumentSaveNewDocumentsToCloud": {
+        "dtype": "boolean",
+        "value": "0"
+      },
+      "ShowPathbar": {
+        "dtype": "boolean",
+        "value": "1"
+      }
     }
   }
 }
+
