@@ -20,10 +20,10 @@ brew "apache-arrow"
 brew "boost"
 # Official Amazon AWS command-line interface
 brew "awscli"
-# Clone of cat(1) with syntax highlighting and Git integration
-brew "bat"
 # Text-based UI library
 brew "ncurses"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Console Bonsai is a bonsai tree generator, written in C using ncurses
 brew "cbonsai"
 # Object-file caching compiler wrapper
@@ -128,6 +128,8 @@ brew "qemu"
 brew "ripgrep"
 # Experimental Rust compiler front-end for IDEs
 brew "rust-analyzer"
+# Rust toolchain installer
+brew "rustup"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
@@ -157,6 +159,8 @@ brew "koekeishiya/formulae/yabai"
 brew "probe-rs/probe-rs/probe-rs"
 # Quantum Mechanical Keyboard (QMK) Firmware
 brew "qmk/qmk/qmk"
+# Managed client-based VPN service to securely access AWS resources
+cask "aws-vpn-client"
 # E-books management software
 cask "calibre"
 # Universal database tool and SQL client
@@ -182,6 +186,10 @@ cask "imageoptim"
 cask "keepassxc"
 # CAD application
 cask "librecad"
+# Adaptive brightness for external displays
+cask "lunar"
+# Syncs files between computers and MEGA Cloud drives
+cask "megasync"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Toolbox companion for QMK Firmware
