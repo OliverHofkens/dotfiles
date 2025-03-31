@@ -1,11 +1,6 @@
 tap "armmbed/formulae"
 tap "felixkratz/formulae"
 tap "hashicorp/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-fonts"
-tap "homebrew/core"
-tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "osx-cross/arm"
 tap "osx-cross/avr"
@@ -117,8 +112,6 @@ brew "neovim"
 brew "node"
 # On-chip debugging, in-system programming and boundary-scan testing
 brew "open-ocd"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # CLI for Postgres with auto-completion and syntax highlighting
@@ -193,8 +186,6 @@ cask "librecad"
 cask "obsidian"
 # Toolbox companion for QMK Firmware
 cask "qmk-toolbox"
-# Music player and music collection organizer
-cask "strawberry"
 # Run commands and display their output on the desktop
 cask "ubersicht"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
