@@ -1,6 +1,10 @@
 {
   "dump": {
-    "NSGlobalDomain": ["KeyRepeat"],
+    "NSGlobalDomain": [
+      "com.apple.swipescrolldirection",
+      "InitialKeyRepeat",
+      "KeyRepeat"
+    ],
     "com.apple.dock": [
       "autohide",
       "autohide-time-modifier",
@@ -21,8 +25,16 @@
   "values": {
     "NSGlobalDomain": {
       "KeyRepeat": {
-        "dtype": "integer",
+        "dtype": "float",
         "value": "1"
+      },
+      "com.apple.swipescrolldirection": {
+        "dtype": "boolean",
+        "value": "0"
+      },
+      "InitialKeyRepeat": {
+        "dtype": "float",
+        "value": "10"
       }
     },
     "com.apple.dock": {
