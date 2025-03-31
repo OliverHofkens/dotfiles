@@ -1,3 +1,4 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
 fish_add_path ~/.cargo/bin
 fish_add_path -a ~/.local/bin
 
