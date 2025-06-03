@@ -5,10 +5,12 @@ return {
     version = false, -- Never set this value to "*"! Never!
     opts = {
       provider = "bedrock",
-      bedrock = {
-        model = "eu.anthropic.claude-3-7-sonnet-20250219-v1:0",
-        aws_profile = "gorilla-tools-formulas",
-        aws_region = "eu-west-1",
+      providers = {
+        bedrock = {
+          model = "eu.anthropic.claude-3-7-sonnet-20250219-v1:0",
+          aws_profile = "gorilla-tools-formulas",
+          aws_region = "eu-west-1",
+        },
       },
       file_selector = {
         provider = "fzf",
