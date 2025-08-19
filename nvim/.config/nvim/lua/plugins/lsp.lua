@@ -3,6 +3,9 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
+      codelens = {
+        enabled = true,
+      },
       servers = {
         pyright = {
           settings = {
@@ -30,6 +33,12 @@ return {
       linters_by_ft = {
         rust = { "clippy" },
       },
+      linters = {
+        sqlfluff = {
+          -- SQLFluff can't lint dbt projects through stdin.
+          stdin = false,
+        },
+      },
     },
   },
   -- Formatting
@@ -40,6 +49,13 @@ return {
         markdown = {},
         python = { "ruff_format", "ruff_organize_imports" },
         yaml = {},
+      },
+      formatters = {
+        sqlfluff = {
+          -- SQLFluff can't lint dbt projects through stdin.
+          stdin = false,
+          args = { "fix", "$FILENAME" },
+        },
       },
     },
   },
