@@ -1,0 +1,10 @@
+{
+  "awsAuthRefresh": "aws sso login --profile gorilla-tools-formulas",
+  "env": {
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "eu.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    "AWS_PROFILE": "gorilla-tools-formulas",
+    "AWS_REGION": "eu-west-1",
+    "CLAUDE_CODE_USE_BEDROCK": "1"
+  }
+}
