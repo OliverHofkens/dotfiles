@@ -3,9 +3,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      codelens = {
-        enabled = true,
-      },
       servers = {
         pyright = {
           settings = {
@@ -35,8 +32,7 @@ return {
       },
       linters = {
         sqlfluff = {
-          -- SQLFluff can't lint dbt projects through stdin.
-          stdin = false,
+          args = { "lint", "--templater=jinja", "--format=json" },
         },
       },
     },
@@ -52,9 +48,7 @@ return {
       },
       formatters = {
         sqlfluff = {
-          -- SQLFluff can't lint dbt projects through stdin.
-          stdin = false,
-          args = { "fix", "$FILENAME" },
+          args = { "fix", "--templater", "jinja", "-" },
         },
       },
     },
