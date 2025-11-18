@@ -1,21 +1,15 @@
-format = "$all${custom.aws_sso_expiry}$line_break$character"
+format = "$all$line_break$character"
 
 [aws]
 format = '[$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
 
 [aws.region_aliases]
+eu-central-1 = 'euc-1'
 eu-west-1 = 'euw-1'
-
-[custom.aws_sso_expiry]
-command = "~/.config/aws_sso_expiry/target/release/aws_sso_expiry"
-when = """ test -n "${AWS_PROFILE}" """
-shell = "/bin/bash"
-format = '[$symbol ($output)]($style)'
-symbol = "󰥿"
-style = "bold yellow"
+us-east-1 = 'use-1'
 
 [docker_context]
-disabled  = true
+disabled = true
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
