@@ -5,11 +5,8 @@ return {
     opts = {
       servers = {
         pyright = {
-          settings = {
-            python = {
-              pythonPath = ".venv/bin/python3",
-            },
-          },
+          -- Enabled by default by the LazyVim Python Extras
+          enabled = false,
         },
         yamlls = {
           settings = {
@@ -23,11 +20,22 @@ return {
       },
     },
   },
+  {
+    "mason-org/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = { "ruff", "yamlls" },
+    },
+    dependencies = {
+      { "mason-org/mason.nvim", opts = {} },
+      "neovim/nvim-lspconfig",
+    },
+  },
   -- Linting
   {
     "mfussenegger/nvim-lint",
     opts = {
       linters_by_ft = {
+        python = { "ruff" },
         rust = { "clippy" },
       },
       linters = {
