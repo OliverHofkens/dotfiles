@@ -8,6 +8,9 @@ return {
           -- Enabled by default by the LazyVim Python Extras
           enabled = false,
         },
+        ty = {
+          enabled = true,
+        },
         yamlls = {
           settings = {
             yaml = {
@@ -23,7 +26,7 @@ return {
   {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "ruff", "yamlls" },
+      ensure_installed = { "ruff", "ty", "yamlls" },
     },
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },
