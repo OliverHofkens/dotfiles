@@ -1,7 +1,0 @@
-set-env:
-  - AWS_PROFILE=gorilla-tools-formulas
-  - AWS_REGION_NAME=eu-west-1
-
-model: bedrock/eu.anthropic.claude-3-7-sonnet-20250219-v1:0
-# Ignoring model warnings, as AWS_PROFILE is sufficient
-# show-model-warnings: false
