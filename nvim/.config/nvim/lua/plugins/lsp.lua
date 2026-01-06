@@ -26,7 +26,11 @@ return {
   {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "ruff", "ty", "yamlls" },
+      ensure_installed = {
+        "ruff",
+        "ty",
+        "yamlls",
+      },
     },
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },
@@ -39,7 +43,9 @@ return {
     opts = {
       linters_by_ft = {
         python = { "ruff" },
+        rst = { "rstcheck", "proselint", "write_good" },
         rust = { "clippy" },
+        ["*"] = { "typos" },
       },
       linters = {
         sqlfluff = {
@@ -55,6 +61,7 @@ return {
       formatters_by_ft = {
         markdown = {},
         python = { "ruff_format", "ruff_organize_imports" },
+        rst = { "docstrfmt", "trim_whitespace" },
         yaml = {},
       },
       formatters = {
