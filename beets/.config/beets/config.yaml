@@ -1,10 +1,20 @@
 directory: ~/Sync/Music
 library: ~/Sync/Music/beets-library.db
-plugins: fetchart embedart fromfilename info edit
+plugins:
+  - musicbrainz
+  - fromfilename
+  - info
+  - edit
+  - fetchart
+  - embedart
+  - lyrics
 
 paths:
   default: $albumartist/$album%aunique{}/$track $title
   singleton: $artist/Non-Album/$title
+
+import:
+  copy: yes
 
 fetchart:
   auto: true
@@ -13,3 +23,7 @@ fetchart:
 embedart:
   auto: yes
   ifempty: yes
+
+lyrics:
+  auto: yes
+  sources: "*"
