@@ -49,7 +49,8 @@ return {
       },
       linters = {
         sqlfluff = {
-          args = { "lint", "--templater=jinja", "--format=json" },
+          -- Temporarily disabled as it's completely broken since an update.
+          -- args = { "lint", "--templater=jinja", "--format=json" },
         },
       },
     },
