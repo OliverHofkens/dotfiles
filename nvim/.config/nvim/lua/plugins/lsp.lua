@@ -59,8 +59,9 @@ return {
   {
     "stevearc/conform.nvim",
     opts = {
+      log_level = vim.log.levels.DEBUG,
       formatters_by_ft = {
-        markdown = {},
+        markdown = { "markdownlint-cli2" },
         python = { "ruff_format", "ruff_organize_imports" },
         rst = { "docstrfmt", "trim_whitespace" },
         yaml = {},
