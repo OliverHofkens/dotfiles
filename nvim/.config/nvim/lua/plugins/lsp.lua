@@ -61,7 +61,10 @@ return {
     opts = {
       log_level = vim.log.levels.DEBUG,
       formatters_by_ft = {
-        markdown = { "markdownlint-cli2" },
+        markdown = {
+          -- markdownlint-cli2 keeps destroying files, e.g. removing links and destroying footnotes
+          -- "markdownlint-cli2"
+        },
         python = { "ruff_format", "ruff_organize_imports" },
         rst = { "docstrfmt", "trim_whitespace" },
         yaml = {},
@@ -88,5 +91,12 @@ return {
         },
       },
     },
+  },
+  {
+    "jakewvincent/mkdnflow.nvim",
+    ft = { "markdown" },
+    config = function()
+      require("mkdnflow").setup({})
+    end,
   },
 }
