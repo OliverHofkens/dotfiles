@@ -8,6 +8,7 @@ plugins:
   - fetchart
   - embedart
   - lyrics
+  - convert
 
 paths:
   default: $albumartist/$album%aunique{}/$track $title
@@ -27,3 +28,21 @@ embedart:
 lyrics:
   auto: yes
   sources: "*"
+
+# FLAC masters get moved here (not kept in ~/Sync/Music) and archived to
+# MEGA + the homeserver by scripts/flac_archive.py, which also deletes them
+# locally once both are verified.
+#
+# Don't use MEGAsync's GUI "Backup" feature to archive these -- it mirrors
+# local deletions to the cloud copy. Use `mega-put`/`mega-cp` instead.
+#
+# NOTE: `keep_new` is ignored by beets 2.5.1's convert_func() -- always pass
+# `-k` on the CLI.
+convert:
+  dest: ~/FlacArchive/Music
+  format: opus
+  never_convert_lossy_files: yes
+  formats:
+    opus:
+      command: ffmpeg -i $source -y -vn -acodec libopus -ab 160k $dest
+      extension: opus
