@@ -5,15 +5,19 @@
   "lsp": true,
   "permission": {},
   "provider": {
-    "llama.cpp": {
+    "MLX": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "llama-server (local)",
+      "name": "MLX (local)",
       "options": {
         "baseURL": "http://127.0.0.1:8080/v1",
       },
       "models": {
-        "ggml-org/Qwen3.8-27B-GGUF:Q4_K_M": {
-          "name": "Qwen3.8-27B (local)",
+        "Blarfursnarg/OxCoder-9B-mlx": {
+          "name": "OxCoder-9B (local)",
+          "options": {
+            "repetition_penalty": 1.15,
+            "repetition_context_size": 64,
+          },
         },
       },
     },
