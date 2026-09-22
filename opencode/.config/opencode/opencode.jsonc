@@ -21,12 +21,6 @@
         },
       },
     },
-    "amazon-bedrock": {
-      "options": {
-        "region": "eu-west-1",
-        "profile": "gorilla-tools-formulas",
-      },
-    },
   },
   "share": "disabled",
 }
