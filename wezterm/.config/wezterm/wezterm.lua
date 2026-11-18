@@ -5,6 +5,7 @@ local config = wezterm.config_builder()
 -- System
 config.check_for_updates = false
 config.max_fps = 120 -- Smoother scrolling in editors
+config.term = "wezterm"
 
 -- GUI
 function scheme_for_appearance(appearance)
